@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
         Hp -= dmg;
         if (Hp <= 0)
         {
-            ex.Play();
+            //ex.Play();
             Destroy(this.gameObject);
             tov = false;
         }

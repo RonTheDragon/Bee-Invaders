@@ -46,9 +46,9 @@ public class Player : MonoBehaviour
 
     //destroy obj and create new in the start pos
     //if i get hit few times, game over
-    public void TakeDmg()
+    public void TakeDmg(float dmg)
     {
-        HP--;
+        HP-=dmg;
         text.text = "" + HP;
         if (HP>0)
         {

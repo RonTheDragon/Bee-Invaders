@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : Projectiles
 {
-    public float speed = 10f;
-    public float dmg = 10;
-    public Rigidbody2D rb;
-    private Vector2 screenbounds;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,16 +19,6 @@ public class Bullet : MonoBehaviour
         //if bullet reaches screen bound
         if (transform.position.y > screenbounds.y)
         {
-            Destroy(this.gameObject);
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D coll)
-    {
-        //if it hits enemy, enemy takes dmg and destroy the bullet
-        Enemy enemy = coll.GetComponent<Enemy>();
-        if (coll.CompareTag("Enemy"))
-        {
-            enemy.TakeDmg(dmg);
             Destroy(this.gameObject);
         }
     }

@@ -7,12 +7,9 @@ public class Enemy : MonoBehaviour
     public float speed = 2;
     public float direct = 1;
     private Vector2 screenbounds;
+    public float Timer;
+    public Vector2 FireCooldown;
     //public float Hp = 20;
-    public GameObject enemylaser;
-    public GameObject pointshoot;
-    public bool tov = true;
-    public AudioSource ex;
-    public AudioSource shoot;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +20,15 @@ public class Enemy : MonoBehaviour
     //check if enemy is in screen bound;
     void Update()
     {
-
+        if (Timer > 0)
+        {
+            Timer -= Time.deltaTime;
+        }
+        else
+        {
+            Timer = Random.Range(FireCooldown.x, FireCooldown.y);
+            //Shoot();
+        }
         transform.position += Vector3.right * speed * Time.deltaTime * direct;
         if (direct > 0 && transform.position.x>= screenbounds.x)
         {
@@ -33,15 +38,13 @@ public class Enemy : MonoBehaviour
         {
             direct *= -1;
         }
+
+
     }
 
 
     public void SpawnAs()
     {
-        //GameObject a = Instantiate(enemylaser) as GameObject;
-        //a.transform.position = new Vector2(pointshoot.transform.position.x, pointshoot.transform.position.y);
-        Instantiate(enemylaser, pointshoot.transform.position, enemylaser.transform.rotation);
-        //shoot.Play();
         
     }
 

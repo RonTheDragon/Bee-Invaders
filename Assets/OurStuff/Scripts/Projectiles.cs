@@ -5,23 +5,19 @@ using UnityEngine;
 public class Projectiles : MonoBehaviour
 {
     
-    public float speed = 10f;
-    public float dmg = 10;
-    public Rigidbody2D rb;
+    public float speed = 1;
+    public float dmg = 1;
+    public Rigidbody rb;
     protected Vector2 screenbounds;
     [SerializeField] string attackable;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position += transform.forward * speed * Time.deltaTime;
     }
-    protected void OnTriggerEnter2D(Collider2D coll)
+    protected void OnTriggerEnter(Collider coll)
     {
         //if it hits enemy, enemy takes dmg and destroy the bullet
         Health hp= coll.GetComponent<Health>();

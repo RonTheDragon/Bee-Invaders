@@ -43,25 +43,6 @@ public class Player : MonoBehaviour
 
     }
 
-    //destroy obj and create new in the start pos
-    //if i get hit few times, game over
-    //public void TakeDmg(float dmg)
-    //{
-    //    HP-=dmg;
-    //    textHP.text = "" + HP;
-    //    if (HP>0)
-    //    {
-    //        ReSpawn();
-    //        Destroy(this.gameObject);
-    //    }
-    //    else
-    //    {
-    //        HP = 0;
-    //        //this.gameObject.SetActive(false);
-    //        Destroy(this.gameObject);
-    //        end.text="Game Over";
-    //    }
-    //}
 
     public void ReSpawn()
     {

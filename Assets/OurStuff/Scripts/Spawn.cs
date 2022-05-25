@@ -16,9 +16,9 @@ public class Spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0, -speed * Time.deltaTime);
+        transform.position += new Vector3(0, speed * Time.deltaTime);
         //check if it's in the screen bounds*2
-        if(transform.position.y< -screenBounds.y*2)
+        if(transform.position.y< screenBounds.y*2)
         {
             Destroy(this.gameObject);
         }

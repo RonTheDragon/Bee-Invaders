@@ -7,7 +7,6 @@ public class shoot : MonoBehaviour
     public Transform firepoint;
     public GameObject bulletPrefab;
     Player player;
-    public AudioSource sfx;
     // Update is called once per frame
     void Start()
     {
@@ -18,7 +17,6 @@ public class shoot : MonoBehaviour
         if (Input.GetButtonDown("Vertical"))
         {
             Shoot();
-            //sfx.Play();
         }
     }
 

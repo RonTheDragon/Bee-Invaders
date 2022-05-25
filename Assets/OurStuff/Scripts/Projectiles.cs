@@ -24,12 +24,14 @@ public class Projectiles : MonoBehaviour
     protected void OnTriggerEnter2D(Collider2D coll)
     {
         //if it hits enemy, enemy takes dmg and destroy the bullet
-        Enemy enemy = coll.GetComponent<Enemy>();
-        Player player = coll.GetComponent<Player>();
+        //Enemy enemy = coll.GetComponent<Enemy>();
+        //Player player = coll.GetComponent<Player>();
+        Health hp= coll.GetComponent<Health>();
         if (coll.CompareTag(attackable))
         {
-            enemy?.TakeDmg(dmg);
-            player?.TakeDmg(dmg);
+            //enemy?.TakeDmg(dmg);
+            //player?.TakeDmg(dmg);
+            hp?.TakeDmg(dmg);
             Destroy(this.gameObject);
         }
     }

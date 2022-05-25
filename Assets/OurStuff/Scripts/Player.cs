@@ -1,23 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class Player : MonoBehaviour
 {
     public float speed = 0;
-    public static float HP = 3;
+    //public static float HP = 3;
     private Vector2 screenbounds;
     private Rigidbody2D rb;
     private Vector3 startpos;
-    public Text text;
     public Text end;
     // Start is called before the first frame update
     void Start()
     {
         //present HP
-        text.text = "HP: " + HP;
+        
         //Start position
         startpos = transform.position;
         //get the screen bounds
@@ -46,23 +45,23 @@ public class Player : MonoBehaviour
 
     //destroy obj and create new in the start pos
     //if i get hit few times, game over
-    public void TakeDmg(float dmg)
-    {
-        HP-=dmg;
-        text.text = "" + HP;
-        if (HP>0)
-        {
-            ReSpawn();
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            HP = 0;
-            //this.gameObject.SetActive(false);
-            Destroy(this.gameObject);
-            end.text="Game Over";
-        }
-    }
+    //public void TakeDmg(float dmg)
+    //{
+    //    HP-=dmg;
+    //    textHP.text = "" + HP;
+    //    if (HP>0)
+    //    {
+    //        ReSpawn();
+    //        Destroy(this.gameObject);
+    //    }
+    //    else
+    //    {
+    //        HP = 0;
+    //        //this.gameObject.SetActive(false);
+    //        Destroy(this.gameObject);
+    //        end.text="Game Over";
+    //    }
+    //}
 
     public void ReSpawn()
     {

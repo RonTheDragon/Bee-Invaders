@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class EnemyHealth : Health
 {
+    public override void TakeDmg(float dmg)
+    {
+        HP -= dmg;
+        if (HP <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public float speed = 2;
     public float direct = 1;
     private Vector2 screenbounds;
-    public float Hp = 20;
+    //public float Hp = 20;
     public GameObject enemylaser;
     public GameObject pointshoot;
     public bool tov = true;
@@ -35,18 +35,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDmg(float dmg)
-    {
-        Hp -= dmg;
-        if (Hp <= 0)
-        {
-            //ex.Play();
-            Destroy(this.gameObject);
-            tov = false;
-        }
-        else
-            tov = true;
-    }
 
     public void SpawnAs()
     {

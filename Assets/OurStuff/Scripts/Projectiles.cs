@@ -24,6 +24,7 @@ public class Projectiles : MonoBehaviour
         if (coll.transform.CompareTag(attackable))
         {
             hp?.TakeDmg(dmg);
+            Debug.Log($"You hit {attackable}");
             Destroy(this.gameObject);
         }
     }

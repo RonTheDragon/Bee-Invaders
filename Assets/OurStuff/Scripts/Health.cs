@@ -6,5 +6,5 @@ public abstract class Health : MonoBehaviour
 {
     public float HP = 3;
 
-    public abstract void TakeDmg(float dmg);
+    public abstract void TakeDmg(float damage);
 }

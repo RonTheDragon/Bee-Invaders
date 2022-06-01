@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5855824648875968827}
   - component: {fileID: -383008218853018550}
   m_Layer: 0
-  m_Name: 'bullet laser nuke '
+  m_Name: PlayerPro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,9 +111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  dmg: 10
+  dmg: 1
   rb: {fileID: 5855824648875968827}
-  attackable: Player
+  attackable: Enemy
 --- !u!54 &5855824648875968827
 Rigidbody:
   m_ObjectHideFlags: 0

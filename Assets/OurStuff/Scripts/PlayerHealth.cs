@@ -9,7 +9,7 @@ public class PlayerHealth : Health
     public override void TakeDmg(float dmg)
     {
         HP -= dmg;
-        textHP.text = "" + HP;
+        textHP.text = "HP: " + HP;
         if (HP > 0)
         {
             playa.ReSpawn();

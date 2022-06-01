@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 7968605593338307459}
   - component: {fileID: 7968605593338307458}
   m_Layer: 0
-  m_Name: bullet
+  m_Name: bullet 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -174,4 +174,4 @@ MonoBehaviour:
   speed: 10
   dmg: 1
   rb: {fileID: 7968605593338307459}
-  attackable: Enemy
+  attackable: Player

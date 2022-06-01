@@ -93,7 +93,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5855824648875968820}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -110,10 +110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277b1fc18c8ee01458be0437456d25fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 5
   dmg: 10
   rb: {fileID: 5855824648875968827}
-  attackable: 
+  attackable: Player
 --- !u!54 &5855824648875968827
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -142,4 +142,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3c228ce7be1703479dc01624b9ac314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 4
+  time: 20

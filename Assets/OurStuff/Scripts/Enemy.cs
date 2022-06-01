@@ -9,6 +9,9 @@ public class Enemy : MonoBehaviour
     private Vector2 screenbounds;
     public float Timer;
     public Vector2 FireCooldown;
+
+    public Transform firepoint;
+    public GameObject bulletPrefab;
     //public float Hp = 20;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +30,7 @@ public class Enemy : MonoBehaviour
         else
         {
             Timer = Random.Range(FireCooldown.x, FireCooldown.y);
-            //Shoot();
+            Shoot();
         }
         transform.position += Vector3.right * speed * Time.deltaTime * direct;
         if (direct > 0 && transform.position.x>= screenbounds.x)
@@ -43,9 +46,10 @@ public class Enemy : MonoBehaviour
     }
 
 
-    public void SpawnAs()
+    void Shoot()
     {
-        
+        //create bullet
+        Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
     }
 
 }

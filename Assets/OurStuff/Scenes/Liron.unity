@@ -466,7 +466,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1941552292}
-  - component: {fileID: 1941552291}
   - component: {fileID: 1941552290}
   m_Layer: 0
   m_Name: Enemy
@@ -491,18 +490,6 @@ MonoBehaviour:
   direct: 1
   Timer: 0
   FireCooldown: {x: 2, y: 10}
---- !u!114 &1941552291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941552289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32e7ec210febf54183ac4d49de819fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   firepoint: {fileID: 1240015908}
   bulletPrefab: {fileID: 5855824648875968820, guid: 04819627c0ef6784cb9ac46f11d76fa9, type: 3}
 --- !u!4 &1941552292

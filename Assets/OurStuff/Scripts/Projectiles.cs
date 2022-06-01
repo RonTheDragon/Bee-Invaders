@@ -21,7 +21,7 @@ public class Projectiles : MonoBehaviour
     {
         //if it hits enemy, enemy takes dmg and destroy the bullet
         Health hp= coll.GetComponent<Health>();
-        if (coll.CompareTag(attackable))
+        if (coll.transform.CompareTag(attackable))
         {
             hp?.TakeDmg(dmg);
             Destroy(this.gameObject);

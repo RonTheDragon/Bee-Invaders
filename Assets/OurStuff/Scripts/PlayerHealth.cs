@@ -6,12 +6,15 @@ public class PlayerHealth : Health
 {
     public Text textHP;
     Player playa;
-    float shield = 0;
+    [SerializeField] float shield = 0;
     float maxshield =5;
+
+    public GameObject forcefield;
     public override void TakeDmg(float dmg)
     {
         if (shield<=0)
         {
+            //forcefield.SetActive(false);
             HP -= dmg;
             textHP.text = "HP: " + HP;
             if (HP > 0)
@@ -32,6 +35,7 @@ public class PlayerHealth : Health
     void ShieldActivate()
     {
         shield = maxshield;
+        forcefield.SetActive(true);
     }
 
     // Start is called before the first frame update
@@ -47,6 +51,10 @@ public class PlayerHealth : Health
         if (shield>0)
         {
             shield -= Time.deltaTime;
+        }
+        if(shield<=0)
+        {
+            forcefield.SetActive(false);
         }
         if (Input.GetKeyDown(KeyCode.F)&& shield<=0)
         {
